@@ -24,30 +24,57 @@
     <div class="content">
         <!-- Menampilkan data diri, dan harus muncul pertama di layar kecil sebelum main -->
         <aside class="card">
-            <h1>About me</h1>
-            <img src="assets/img/dan.jpg" alt="dani yusuf" width="120px">
-            <ul>
+            <h1 style="align-self: center;">About me</h1>
+            <img src="assets/img/dan.jpg" alt="dani yusuf" width="120px" style="border: 1px solid;">
+            <!-- I can implement table here -->
+            <table>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td style="vertical-align: center;">Muh. Dani Yusuf</td>
+                </tr>
+                <tr>
+                    <td>Tanggal Lahir</td>
+                    <td>:</td>
+                    <td>06 Juni 2001</td>
+                </tr>
+                <tr>
+                    <td>Pekerjaan</td>
+                    <td>:</td>
+                    <td>Mahasiswa</td>
+                </tr>
+                <tr>
+                    <td>Nama</td>
+                    <td>:</td>
+                    <td>Muhamad Dani Yusuf</td>
+                </tr>
+            </table>
+            <!-- <ul>
                 <li>Nama : Muhamad Dani Yusuf</li>
-                <li>Tempat Tanggal Lahir : Bekasi, 06 Oktober 2001</li>
+                <li>Tempat Tanggal Lahir : Bekasi, <br>06 Oktober 2001</li>
                 <li>Pekerjaan : Mahasiswa di Universitas Bhayangkara Jakarta Raya</li>
-                <li>Check me out on : </li>
+                <li>Check me out on : </li> -->
                 <!-- Put github and twitter -->
-            </ul>
+            <!-- </ul> -->
         </aside>
         <main>
-            <article class="card post">
+            <article class="card post" id="article-1">
                 <div class="post-title">
-                    <h1>A little bit of myself</h1>
+                    <h1 class="lang-en active">A little bit of myself</h1>
+                    <h1 class="lang-id disabled">Sedikit tentang saya</h1>
+                    <h1 class="lang-jp disabled">自分のこと</h1>
                     <p>11th June 2023</p>
                 </div>
                 <div class="post-content">
-                    <p>Hello, my name is Dan Yuki, currently still in college learning some programming and maths. I also can speak in 3
+                    <p class="lang-en active">Hello, my name is Dan Yuki, currently still in college learning some programming and maths. I also can speak in 3
                         languages, Indonesian, English, and Japanese. Feel free to use those languages when speaking with me.</p>
+                    <p class="lang-id disabled">Halo, nama saya Dan Yuki, saat ini sedang menjalankan studi di universitas belajar programming dan matematika. Selain itu saya juga dapat berbicara dalam 3 bahasa, Bahasa Indonesia, Bahasa Inggris dan Bahasa Jepang</p>
+                    <p class="lang-jp disabled">Ini bahasa jepang</p>
                     <div class="post-lang">
                         <p>See this in : </p>
-                        <a href="#" onclick="content_language('en', this.class)" class="lang-disabled">EN</a>
-                        <a href="#" onclick="content_language('id')" class="lang-active">ID</a>
-                        <a href="#" onclick="content_language('jp')" class="lang-disabled">JP</a>
+                        <a href="#" onclick="change_language(this, 'lang-en', 0)" class="lang-active" id="en-1">EN</a>
+                        <a href="#" onclick="change_language(this, 'lang-id', 0)" class="lang-disabled" id="id-1">ID</a>
+                        <a href="#" onclick="change_language(this, 'lang-jp', 0)" class="lang-disabled" id="jp-1">JP</a>
                     </div>
                 </div>
             </article>
@@ -57,12 +84,18 @@
                     <p>12th June 2023</p>
                 </div>
                 <div class="post-content">
-                    <p>This is the second post</p>
+                    <p class="lang-en active">Hello, my name is Dan Yuki, currently still in college learning some programming and maths. I
+                        also can speak in 3
+                        languages, Indonesian, English, and Japanese. Feel free to use those languages when speaking with me.</p>
+                    <p class="lang-id disabled">Halo, nama saya Dan Yuki, saat ini sedang menjalankan studi di universitas belajar
+                        programming dan matematika. Selain itu saya juga dapat berbicara dalam 3 bahasa, Bahasa Indonesia, Bahasa Inggris
+                        dan Bahasa Jepang</p>
+                    <p class="lang-jp disabled">Ini bahasa jepang</p>
                     <div class="post-lang">
                         <p>See this in : </p>
-                        <a href="#" onclick="content_language('en', this.class)" class="lang-disabled">EN</a>
-                        <a href="#" onclick="content_language('id')" class="lang-active">ID</a>
-                        <a href="#" onclick="content_language('jp')" class="lang-disabled">JP</a>
+                        <a href="#" onclick="change_language(this, 'lang-en', 1)" class="lang-active">EN</a>
+                        <a href="#" onclick="change_language(this, 'lang-id', 1)" class="lang-disabled" >ID</a>
+                        <a href="#" onclick="change_language(this, 'lang-jp', 1)" class="lang-disabled">JP</a>
                     </div>
                 </div>
             </article>
@@ -74,12 +107,22 @@
     </footer>
 
     <script>
-        function content_language(lang, elem) {
-            console.log(lang);
-            console.log(event.srcElement);
-            element = event.srcElement;
-            element.innerHTML('test');
-            
+        function change_language(event, language, index) {
+            // Ubah button yang aktif
+            article = document.getElementsByTagName('article').item(index);
+            activeLanguage = article.getElementsByClassName('lang-active').item(0);
+            console.log(article);
+            activeLanguage.className = 'lang-disabled';
+
+            // Disable text
+            textToBeDisabled = article.getElementsByClassName('active');
+            foreac
+            textToBeDisabled.classList.replace('active', 'disabled')
+
+            event.className = 'lang-active';
+            targetLanguage = article.getElementsByClassName(language).item(0);
+            // console.log(targetLanguage);
+            targetLanguage.className = language + " active";
         }
     </script>
 </body>
