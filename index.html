@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan Yuki</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header>
+        <div class="jumbotron">
+            <h1>Dan Yuki</h1>
+            <p>A developer, language enthusiast, and some kind of gamer.</p>
+        </div>
+        <nav>
+            <ul>
+                <li>Home</li>
+                <li>Works</li>
+                <li>About This Site</li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <!-- Menampilkan data diri, dan harus muncul pertama di layar kecil sebelum main -->
+        <aside class="card">
+            <h1>About me</h1>
+            <img src="assets/img/dan.jpg" alt="dani yusuf" width="120px">
+            <ul>
+                <li>Nama : Muhamad Dani Yusuf</li>
+                <li>Tempat Tanggal Lahir : Bekasi, 06 Oktober 2001</li>
+                <li>Pekerjaan : Mahasiswa di Universitas Bhayangkara Jakarta Raya</li>
+                <li>Check me out on : </li>
+                <!-- Put github and twitter -->
+            </ul>
+        </aside>
+        <main>
+            <article class="card post">
+                <div class="post-title">
+                    <h1>A little bit of myself</h1>
+                    <p>11th June 2023</p>
+                </div>
+                <div class="post-content">
+                    <p>Hello, my name is Dan Yuki, currently still in college learning some programming and maths. I also can speak in 3
+                        languages, Indonesian, English, and Japanese. Feel free to use those languages when speaking with me.</p>
+                    <div class="post-lang">
+                        <p>See this in : </p>
+                        <a href="#" onclick="content_language('en', this.class)" class="lang-disabled">EN</a>
+                        <a href="#" onclick="content_language('id')" class="lang-active">ID</a>
+                        <a href="#" onclick="content_language('jp')" class="lang-disabled">JP</a>
+                    </div>
+                </div>
+            </article>
+            <article class="card post">
+                <div class="post-title">
+                    <h1>Second Post</h1>
+                    <p>12th June 2023</p>
+                </div>
+                <div class="post-content">
+                    <p>This is the second post</p>
+                    <div class="post-lang">
+                        <p>See this in : </p>
+                        <a href="#" onclick="content_language('en', this.class)" class="lang-disabled">EN</a>
+                        <a href="#" onclick="content_language('id')" class="lang-active">ID</a>
+                        <a href="#" onclick="content_language('jp')" class="lang-disabled">JP</a>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <footer>
+        <p><strong>&copy;Dan Yuki 2023</strong></p>
+    </footer>
+
+    <script>
+        function content_language(lang, elem) {
+            console.log(lang);
+            console.log(event.srcElement);
+            element = event.srcElement;
+            element.innerHTML('test');
+            
+        }
+    </script>
+</body>
+</html>
+
+<!-- Make script that switch post language, the text is hardcoded, or written in p tag, but hidden, and show when user click the button -->
