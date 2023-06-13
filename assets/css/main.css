@@ -46,7 +46,7 @@ body .content {
 .content {
     margin: 0.6em 0.6em 0.6em 0.6em;
     padding: 30px;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .card {
@@ -58,13 +58,18 @@ body .content {
 
 aside {
     width: 40%;
+    max-height: 600px;
     /* font-size: .9em; */
     border: 1px solid;
     order: 2;
     display: flex;
     flex-direction: column;
     gap: 1.2em;
-    align-items: center;
+    /* align-items: center; */
+}
+
+aside img {
+    align-self: center;
 }
 
 aside h1{
@@ -77,6 +82,16 @@ aside ul {
     border: 1px solid black;
 }
 
+aside .social {
+    display: flex;
+    gap: 1em;
+}
+
+aside .social-link {
+    display: flex;
+    flex-direction: column;
+}
+
 main {
     width: 100%;
     display: flex;
@@ -86,7 +101,7 @@ main {
     /* margin: 0.6em 0.6em 0.6em 0.6em; */
     /* padding: 30px; */
     order: 1;
-    border: 1px solid;
+    /* border: 1px solid; */
 }
 
 .post {
@@ -96,7 +111,7 @@ main {
 }
 
 .post .post-title{
-    background-color: #a0a3a120;
+    background-color: #a0a3a160;
     padding: 10px;
     border-radius: 10px 10px 0 0;
     /* border: 1px solid; */
@@ -111,18 +126,39 @@ main {
     padding: 10px;
 }
 
+.post .post-body {
+    display: flex;
+    gap: .5em;
+}
+
+.post button {
+    background-color: #237deb;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
 .post .post-lang {
     margin-top: 1em;
     display: flex;
     gap: 1em;
 }
 
+
 .post .post-lang .lang-active { 
+        background-color: #237deb;
     font-weight: bold;
 }
 
 .post .post-lang .lang-disabled {
+    background-color: #237deb80;
     font-weight: lighter;
+}
+
+.post .post-lang .lang-disabled:hover {
+    background-color: #237deb;
+    /* font-weight: lighter; */
+    transition: .2s ease-in-out;
 }
 
 .post .active {
@@ -142,4 +178,15 @@ footer {
     /* bottom: 0; */
     /* left: 0; */
     width: 100%;
+}
+
+@media screen and (max-width: 720px) {
+    body .content {
+        display: block;
+    }
+    aside {
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 1em;
+    }
 }

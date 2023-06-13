@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dan Yuki</title>
     <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/7e1a72f06d.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <header>
@@ -31,71 +32,93 @@
                 <tr>
                     <td>Nama</td>
                     <td>:</td>
-                    <td style="vertical-align: center;">Muh. Dani Yusuf</td>
+                    <td style="vertical-align: center;">Muhamad Dani Yusuf</td>
                 </tr>
                 <tr>
                     <td>Tanggal Lahir</td>
                     <td>:</td>
-                    <td>06 Juni 2001</td>
+                    <td>06 Oktober 2001</td>
                 </tr>
                 <tr>
                     <td>Pekerjaan</td>
                     <td>:</td>
                     <td>Mahasiswa</td>
                 </tr>
-                <tr>
-                    <td>Nama</td>
-                    <td>:</td>
-                    <td>Muhamad Dani Yusuf</td>
-                </tr>
             </table>
-            <!-- <ul>
-                <li>Nama : Muhamad Dani Yusuf</li>
-                <li>Tempat Tanggal Lahir : Bekasi, <br>06 Oktober 2001</li>
-                <li>Pekerjaan : Mahasiswa di Universitas Bhayangkara Jakarta Raya</li>
-                <li>Check me out on : </li> -->
-                <!-- Put github and twitter -->
-            <!-- </ul> -->
+            <p>Check me out on :</p>
+            <div class="social">
+                <div class="social-link">
+                    <a href="https://twitter.com/DanYuki8" target="_blank"><img src="assets/img/twitter.svg" alt="" height="30px"><p>Twitter</p></a>
+                </div>
+                <div class="social-link">
+                    <a href="https://github.com/DanYuki" target="_blank"><img src="assets/img/github.svg" alt="" height="30px"><p>Github</p></a>
+                </div>
+            </div>
         </aside>
         <main>
             <article class="card post" id="article-1">
-                <div class="post-title">
-                    <h1 class="lang-en active">A little bit of myself</h1>
-                    <h1 class="lang-id disabled">Sedikit tentang saya</h1>
+                <div class="post-title" >
+                    <h1 class="lang-en active">About myself</h1>
+                    <h1 class="lang-id disabled">Tentang diri saya</h1>
                     <h1 class="lang-jp disabled">自分のこと</h1>
                     <p>11th June 2023</p>
                 </div>
                 <div class="post-content">
-                    <p class="lang-en active">Hello, my name is Dan Yuki, currently still in college learning some programming and maths. I also can speak in 3
-                        languages, Indonesian, English, and Japanese. Feel free to use those languages when speaking with me.</p>
-                    <p class="lang-id disabled">Halo, nama saya Dan Yuki, saat ini sedang menjalankan studi di universitas belajar programming dan matematika. Selain itu saya juga dapat berbicara dalam 3 bahasa, Bahasa Indonesia, Bahasa Inggris dan Bahasa Jepang</p>
-                    <p class="lang-jp disabled">Ini bahasa jepang</p>
+                    <div class="post-body">
+                        <img src="assets/img/first-post.png" alt="" height="100px" style="border :1px solid">
+                        <p class="lang-en active">Hello there, my name is Muhamad Dani Yusuf or you can also call me Dan Yuki. I'm an university student, currently learning programming. I love playing games, and reading Japanese light novels and mangas, used to watch more anime but not anymore. I could speak in 3 languages, Indonesian, English, and Japanese. Nice to meet you all!</p>
+                        <p class="lang-id disabled">Halo, nama saya Muhamad Dani Yusuf atau boleh juga panggil saya Dan Yuki. Saya seorang mahasiswa yang saat ini sedang belajar programming. Saya suka main game, dan baca light novel dan manga Jepang, dulu sering nonton anime tapi sekarang jarang. Saya bisa berbicara dalam 3 bahasa, bahasa Indonesia, Inggris, dan Jepang. Salam kenal semuanya!</p>
+                        <p class="lang-jp disabled">こんにちは、私はMuhamad Dani Yusufですダン雪と呼ぶのもいいです。私は大学生です、プログラミングを学んでいます。ゲームをやるのは好きです、小説と漫画を読むのも好きです。三つの言語で話せます、インドネシア語、英語、と日本語です。よろしく！</p>
+                    </div>
                     <div class="post-lang">
                         <p>See this in : </p>
-                        <a href="#" onclick="change_language(this, 'lang-en', 0)" class="lang-active" id="en-1">EN</a>
-                        <a href="#" onclick="change_language(this, 'lang-id', 0)" class="lang-disabled" id="id-1">ID</a>
-                        <a href="#" onclick="change_language(this, 'lang-jp', 0)" class="lang-disabled" id="jp-1">JP</a>
+                        <button onclick="change_language(this, 'lang-en', 0)" class="lang-active">EN</button>
+                        <button  onclick="change_language(this, 'lang-id', 0)" class="lang-disabled">ID</button>
+                        <button  onclick="change_language(this, 'lang-jp', 0)" class="lang-disabled">JP</button>
+                    </div>
+                </div>
+            </article>
+            <article class="card post">
+            <div class="post-title">
+                <h1 class="lang-en active">Factorio is so much fun</h1>
+                <h1 class="lang-id disabled">Kecanduan Factorio</h1>
+                <h1 class="lang-jp disabled">ファクトリオのせいで中毒になってる私</h1>
+                <p>11th June 2023</p>
+            </div>
+                <div class="post-content">
+                    <div class="post-body">
+                        <img src="assets/img/factorio.png" alt="" height="100px" width="100px" style="border :1px solid">
+                        <p class="lang-en active">So, recently I've been playing this game called "Factorio". One thing I could say about this game is it's "addictive". And also the factories must grow!</p>
+                        <p class="lang-id disabled">Jadi, akhir-akhir ini saya lagi main game namanya "Factorio". Satu hal yang bisa saya bilang soal game ini itu "Candu". Dan juga, the factories must grow! Ini adalah ungkapan yang sering diucapkan oleh pemain factorio wkwkw</p>
+                        <p class="lang-jp disabled">最近はさ「フクトリオ」というゲームをめちゃ遊んでいます、なんか楽しい過ぎて中毒な感じになります。ファクトリオプレイヤー同士の言葉があります「The factories must grow!」</p>
+                    </div>
+                    <div class="post-lang">
+                        <p>See this in : </p>
+                        <button onclick="change_language(this, 'lang-en', 1)" class="lang-active">EN</button>
+                        <button onclick="change_language(this, 'lang-id', 1)" class="lang-disabled">ID</button>
+                        <button onclick="change_language(this, 'lang-jp', 1)" class="lang-disabled">JP</button>
                     </div>
                 </div>
             </article>
             <article class="card post">
                 <div class="post-title">
-                    <h1>Second Post</h1>
-                    <p>12th June 2023</p>
+                    <h1 class="lang-en active">Why do I learn more than one foreign language?</h1>
+                    <h1 class="lang-id disabled">Kenapa saya belajar lebih dari satu bahasa asing?</h1>
+                    <h1 class="lang-jp disabled">なぜ一つ以上の外国の言語を学んでるのか?</h1>
+                    <p>13th June 2023</p>
                 </div>
                 <div class="post-content">
-                    <p class="lang-en active">Hello, my name is Dan Yuki, currently still in college learning some programming and maths. I
-                        also can speak in 3
-                        languages, Indonesian, English, and Japanese. Feel free to use those languages when speaking with me.</p>
-                    <p class="lang-id disabled">Halo, nama saya Dan Yuki, saat ini sedang menjalankan studi di universitas belajar
-                        programming dan matematika. Selain itu saya juga dapat berbicara dalam 3 bahasa, Bahasa Indonesia, Bahasa Inggris
-                        dan Bahasa Jepang</p>
-                    <p class="lang-jp disabled">Ini bahasa jepang</p>
+                    <div class="post-body">
+                        <img src="assets/img/language.jpg" alt="" height="100px" width="100px" style="border :1px solid">
+                        <p class="lang-en active">Honestly, I like learning languages, there's a certain feeling of satisfaction when I know the true context of something said in other language. And when I learn a language, I also learn the culture behind it, so it kind of fun, to learn new things</p>
+                        <p class="lang-id disabled">Jujur aja, saya suka belajar bahasa, ada rasa kepuasan tersendiri yang saya rasa ketika tau konteks sesungguhnya dari perkataan/kalimat yang diucapkan dalam bahasa lain. Dan ketika saya belajar suatu bahasa, saya juga belajar budaya yang ada menyertainya, jadi rasanya cukup asik karena bisa belajar hal baru</p>
+                        <p class="lang-jp disabled">正直にいうと、言語を学ぶのが好きです、なんか本当コンテクストを理解できるときは満足みたいな感覚があります。言語を学ぶときはその言語と国の文化をまなんでます。新しい事を学ぶのは楽しいです</p>
+                    </div>
                     <div class="post-lang">
                         <p>See this in : </p>
-                        <a href="#" onclick="change_language(this, 'lang-en', 1)" class="lang-active">EN</a>
-                        <a href="#" onclick="change_language(this, 'lang-id', 1)" class="lang-disabled" >ID</a>
-                        <a href="#" onclick="change_language(this, 'lang-jp', 1)" class="lang-disabled">JP</a>
+                        <button onclick="change_language(this, 'lang-en', 2)" class="lang-active">EN</button>
+                        <button onclick="change_language(this, 'lang-id', 2)" class="lang-disabled">ID</button>
+                        <button onclick="change_language(this, 'lang-jp', 2)" class="lang-disabled">JP</button>
                     </div>
                 </div>
             </article>
@@ -111,21 +134,26 @@
             // Ubah button yang aktif
             article = document.getElementsByTagName('article').item(index);
             activeLanguage = article.getElementsByClassName('lang-active').item(0);
-            console.log(article);
             activeLanguage.className = 'lang-disabled';
 
             // Disable text
-            textToBeDisabled = article.getElementsByClassName('active');
-            foreac
-            textToBeDisabled.classList.replace('active', 'disabled')
+            textToBeDisabled = article.querySelectorAll('.active');
+            textToBeDisabled.forEach(function (item) {
+                item.classList.replace('active', 'disabled');
+            });
 
+            // Mengaktifkan tombol bahasa
             event.className = 'lang-active';
-            targetLanguage = article.getElementsByClassName(language).item(0);
-            // console.log(targetLanguage);
-            targetLanguage.className = language + " active";
+
+            // Mengaktifkan heading dan paragraf dalam post
+            targetLanguage = article.querySelectorAll('.'+language);
+            targetLanguage.forEach(function (item) {
+                item.classList.replace('disabled', 'active');
+            });
         }
     </script>
 </body>
 </html>
 
 <!-- Make script that switch post language, the text is hardcoded, or written in p tag, but hidden, and show when user click the button -->
+<!-- I don't know what I'm doing, just spamming with class and flexbox wkwkwk -->
