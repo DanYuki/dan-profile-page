@@ -38,6 +38,15 @@ header nav ul{
     font-size: .8em;
 }
 
+header nav li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav li a:hover {
+    font-weight: 700;
+}
+
 body .content {
     display: flex;
     gap: 1em;

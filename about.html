@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan Yuki</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/7e1a72f06d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron">
+            <h1>Dan Yuki</h1>
+            <p>A developer, language enthusiast, and some kind of gamer.</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="about.html">About This Site</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <main class="card">
+            <h1>About this site</h1>
+            <p>This site is used as a submission for dicoding's "Dasar Pemrograman Web" course. With this site, I try to implement html, css, and some javascripts. This site theme is "Trilingual personal blog" which will be possible for the author or a person to write in three different language, and can be toggled by user by button to choose the language they want to read. Made by Muhamad Dani Yusuf.</p>
+        </main>
+    </div>
+
+    <footer>
+        <p><strong>&copy;Dan Yuki 2023</strong></p>
+    </footer>
+
+    <script>
+        function change_language(event, language, index) {
+            // Ubah button yang aktif
+            article = document.getElementsByTagName('article').item(index);
+            activeLanguage = article.getElementsByClassName('lang-active').item(0);
+            activeLanguage.className = 'lang-disabled';
+
+            // Disable text
+            textToBeDisabled = article.querySelectorAll('.active');
+            textToBeDisabled.forEach(function (item) {
+                item.classList.replace('active', 'disabled');
+            });
+
+            // Mengaktifkan tombol bahasa
+            event.className = 'lang-active';
+
+            // Mengaktifkan heading dan paragraf dalam post
+            targetLanguage = article.querySelectorAll('.' + language);
+            targetLanguage.forEach(function (item) {
+                item.classList.replace('disabled', 'active');
+            });
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- Make script that switch post language, the text is hardcoded, or written in p tag, but hidden, and show when user click the button -->
+<!-- I don't know what I'm doing, just spamming with class and flexbox wkwkwk -->

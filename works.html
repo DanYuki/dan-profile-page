@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dan Yuki</title>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://kit.fontawesome.com/7e1a72f06d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <div class="jumbotron">
+            <h1>Dan Yuki</h1>
+            <p>A developer, language enthusiast, and some kind of gamer.</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="works.html">Works</a></li>
+                <li><a href="about.html">About This Site</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="content">
+        <main class="card">
+            <h1>Works</h1>
+            <p>My works can be seen on my github page, you can check it <a href="https://github.com/DanYuki">here</a>. Usually I work on php based application, and since I work as a teacher too, my main focus of topic is based around school and students. Here are some of my repos you can check : </p>
+            <ul>
+                <li><a href="https://github.com/DanYuki/dan-profile-page">Dan's Profile Page (Which is this site)</a></li>
+                <li><a href="https://github.com/DanYuki/student-savings">Student Savings (for managing tabungan siswa)</a></li>
+                <li><a href="https://github.com/DanYuki/student-bill-v3">Student Bill v3 (for managing bayaran sekolah)</a></li>
+            </ul>
+        </main>
+    </div>
+
+    <footer>
+        <p><strong>&copy;Dan Yuki 2023</strong></p>
+    </footer>
+
+    <script>
+        function change_language(event, language, index) {
+            // Ubah button yang aktif
+            article = document.getElementsByTagName('article').item(index);
+            activeLanguage = article.getElementsByClassName('lang-active').item(0);
+            activeLanguage.className = 'lang-disabled';
+
+            // Disable text
+            textToBeDisabled = article.querySelectorAll('.active');
+            textToBeDisabled.forEach(function (item) {
+                item.classList.replace('active', 'disabled');
+            });
+
+            // Mengaktifkan tombol bahasa
+            event.className = 'lang-active';
+
+            // Mengaktifkan heading dan paragraf dalam post
+            targetLanguage = article.querySelectorAll('.' + language);
+            targetLanguage.forEach(function (item) {
+                item.classList.replace('disabled', 'active');
+            });
+        }
+    </script>
+</body>
+
+</html>
+
+<!-- Make script that switch post language, the text is hardcoded, or written in p tag, but hidden, and show when user click the button -->
+<!-- I don't know what I'm doing, just spamming with class and flexbox wkwkwk -->
