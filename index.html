@@ -21,43 +21,10 @@
             </ul>
         </nav>
     </header>
-
-    <div class="content">
-        <!-- Menampilkan data diri, dan harus muncul pertama di layar kecil sebelum main -->
-        <aside class="card">
-            <h1 style="align-self: center;">About me</h1>
-            <img src="assets/img/dan.jpg" alt="dani yusuf" width="120px" style="border: 1px solid;">
-            <!-- I can implement table here -->
-            <table>
-                <tr>
-                    <td>Nama</td>
-                    <td>:</td>
-                    <td style="vertical-align: center;">Muhamad Dani Yusuf</td>
-                </tr>
-                <tr>
-                    <td>Tanggal Lahir</td>
-                    <td>:</td>
-                    <td>06 Oktober 2001</td>
-                </tr>
-                <tr>
-                    <td>Pekerjaan</td>
-                    <td>:</td>
-                    <td>Mahasiswa</td>
-                </tr>
-            </table>
-            <p>Check me out on :</p>
-            <div class="social">
-                <div class="social-link">
-                    <a href="https://twitter.com/DanYuki8" target="_blank"><img src="assets/img/twitter.svg" alt="" height="30px"><p>Twitter</p></a>
-                </div>
-                <div class="social-link">
-                    <a href="https://github.com/DanYuki" target="_blank"><img src="assets/img/github.svg" alt="" height="30px"><p>Github</p></a>
-                </div>
-            </div>
-        </aside>
-        <main>
+    <main>
+        <div class="content">
             <article class="card post" id="article-1">
-                <div class="post-title" >
+                <div class="post-title">
                     <h1 class="lang-en active">About myself</h1>
                     <h1 class="lang-id disabled">Tentang diri saya</h1>
                     <h1 class="lang-jp disabled">自分のこと</h1>
@@ -66,31 +33,43 @@
                 <div class="post-content">
                     <div class="post-body">
                         <img src="assets/img/first-post.png" alt="" height="100px" style="border :1px solid">
-                        <p class="lang-en active">Hello there, my name is Muhamad Dani Yusuf or you can also call me Dan Yuki. I'm an university student, currently learning programming. I love playing games, and reading Japanese light novels and mangas, used to watch more anime but not anymore. I could speak in 3 languages, Indonesian, English, and Japanese. Nice to meet you all!</p>
-                        <p class="lang-id disabled">Halo, nama saya Muhamad Dani Yusuf atau boleh juga panggil saya Dan Yuki. Saya seorang mahasiswa yang saat ini sedang belajar programming. Saya suka main game, dan baca light novel dan manga Jepang, dulu sering nonton anime tapi sekarang jarang. Saya bisa berbicara dalam 3 bahasa, bahasa Indonesia, Inggris, dan Jepang. Salam kenal semuanya!</p>
-                        <p class="lang-jp disabled">こんにちは、私はMuhamad Dani Yusufですダン雪と呼ぶのもいいです。私は大学生です、プログラミングを学んでいます。ゲームをやるのは好きです、小説と漫画を読むのも好きです。三つの言語で話せます、インドネシア語、英語、と日本語です。よろしく！</p>
+                        <p class="lang-en active">Hello there, my name is Muhamad Dani Yusuf or you can also call me Dan Yuki. I'm
+                            an university student, currently learning programming. I love playing games, and reading Japanese light
+                            novels and mangas, used to watch more anime but not anymore. I could speak in 3 languages, Indonesian,
+                            English, and Japanese. Nice to meet you all!</p>
+                        <p class="lang-id disabled">Halo, nama saya Muhamad Dani Yusuf atau boleh juga panggil saya Dan Yuki. Saya
+                            seorang mahasiswa yang saat ini sedang belajar programming. Saya suka main game, dan baca light novel
+                            dan manga Jepang, dulu sering nonton anime tapi sekarang jarang. Saya bisa berbicara dalam 3 bahasa,
+                            bahasa Indonesia, Inggris, dan Jepang. Salam kenal semuanya!</p>
+                        <p class="lang-jp disabled">こんにちは、私はMuhamad Dani
+                            Yusufですダン雪と呼ぶのもいいです。私は大学生です、プログラミングを学んでいます。ゲームをやるのは好きです、小説と漫画を読むのも好きです。三つの言語で話せます、インドネシア語、英語、と日本語です。よろしく！
+                        </p>
                     </div>
                     <div class="post-lang">
                         <p>See this in : </p>
                         <button onclick="change_language(this, 'lang-en', 0)" class="lang-active">EN</button>
-                        <button  onclick="change_language(this, 'lang-id', 0)" class="lang-disabled">ID</button>
-                        <button  onclick="change_language(this, 'lang-jp', 0)" class="lang-disabled">JP</button>
+                        <button onclick="change_language(this, 'lang-id', 0)" class="lang-disabled">ID</button>
+                        <button onclick="change_language(this, 'lang-jp', 0)" class="lang-disabled">JP</button>
                     </div>
                 </div>
             </article>
             <article class="card post">
-            <div class="post-title">
-                <h1 class="lang-en active">Factorio is so much fun</h1>
-                <h1 class="lang-id disabled">Kecanduan Factorio</h1>
-                <h1 class="lang-jp disabled">ファクトリオのせいで中毒になってる私</h1>
-                <p>11th June 2023</p>
-            </div>
+                <div class="post-title">
+                    <h1 class="lang-en active">Factorio is so much fun</h1>
+                    <h1 class="lang-id disabled">Kecanduan Factorio</h1>
+                    <h1 class="lang-jp disabled">ファクトリオのせいで中毒になってる私</h1>
+                    <p>11th June 2023</p>
+                </div>
                 <div class="post-content">
                     <div class="post-body">
                         <img src="assets/img/factorio.png" alt="" height="100px" width="100px" style="border :1px solid">
-                        <p class="lang-en active">So, recently I've been playing this game called "Factorio". One thing I could say about this game is it's "addictive". And also the factories must grow!</p>
-                        <p class="lang-id disabled">Jadi, akhir-akhir ini saya lagi main game namanya "Factorio". Satu hal yang bisa saya bilang soal game ini itu "Candu". Dan juga, the factories must grow! Ini adalah ungkapan yang sering diucapkan oleh pemain factorio wkwkw</p>
-                        <p class="lang-jp disabled">最近はさ「フクトリオ」というゲームをめちゃ遊んでいます、なんか楽しい過ぎて中毒な感じになります。ファクトリオプレイヤー同士の言葉があります「The factories must grow!」</p>
+                        <p class="lang-en active">So, recently I've been playing this game called "Factorio". One thing I could say
+                            about this game is it's "addictive". And also the factories must grow!</p>
+                        <p class="lang-id disabled">Jadi, akhir-akhir ini saya lagi main game namanya "Factorio". Satu hal yang bisa
+                            saya bilang soal game ini itu "Candu". Dan juga, the factories must grow! Ini adalah ungkapan yang
+                            sering diucapkan oleh pemain factorio wkwkw</p>
+                        <p class="lang-jp disabled">最近はさ「フクトリオ」というゲームをめちゃ遊んでいます、なんか楽しい過ぎて中毒な感じになります。ファクトリオプレイヤー同士の言葉があります「The
+                            factories must grow!」</p>
                     </div>
                     <div class="post-lang">
                         <p>See this in : </p>
@@ -110,9 +89,15 @@
                 <div class="post-content">
                     <div class="post-body">
                         <img src="assets/img/language.jpg" alt="" height="100px" width="100px" style="border :1px solid">
-                        <p class="lang-en active">Honestly, I like learning languages, there's a certain feeling of satisfaction when I know the true context of something said in other language. And when I learn a language, I also learn the culture behind it, so it kind of fun, to learn new things</p>
-                        <p class="lang-id disabled">Jujur aja, saya suka belajar bahasa, ada rasa kepuasan tersendiri yang saya rasa ketika tau konteks sesungguhnya dari perkataan/kalimat yang diucapkan dalam bahasa lain. Dan ketika saya belajar suatu bahasa, saya juga belajar budaya yang ada menyertainya, jadi rasanya cukup asik karena bisa belajar hal baru</p>
-                        <p class="lang-jp disabled">正直にいうと、言語を学ぶのが好きです、なんか本当コンテクストを理解できるときは満足みたいな感覚があります。言語を学ぶときはその言語と国の文化をまなんでます。新しい事を学ぶのは楽しいです</p>
+                        <p class="lang-en active">Honestly, I like learning languages, there's a certain feeling of satisfaction
+                            when I know the true context of something said in other language. And when I learn a language, I also
+                            learn the culture behind it, so it kind of fun, to learn new things</p>
+                        <p class="lang-id disabled">Jujur aja, saya suka belajar bahasa, ada rasa kepuasan tersendiri yang saya rasa
+                            ketika tau konteks sesungguhnya dari perkataan/kalimat yang diucapkan dalam bahasa lain. Dan ketika saya
+                            belajar suatu bahasa, saya juga belajar budaya yang ada menyertainya, jadi rasanya cukup asik karena
+                            bisa belajar hal baru</p>
+                        <p class="lang-jp disabled">
+                            正直にいうと、言語を学ぶのが好きです、なんか本当コンテクストを理解できるときは満足みたいな感覚があります。言語を学ぶときはその言語と国の文化をまなんでます。新しい事を学ぶのは楽しいです</p>
                     </div>
                     <div class="post-lang">
                         <p>See this in : </p>
@@ -122,8 +107,40 @@
                     </div>
                 </div>
             </article>
-        </main>
-    </div>
+            </div>
+            <!-- Menampilkan data diri, dan harus muncul pertama di layar kecil sebelum main -->
+            <aside class="card">
+                <h1 style="align-self: center;">About me</h1>
+                <img src="assets/img/dan.jpg" alt="dani yusuf" width="120px" style="border: 1px solid;">
+                <!-- I can implement table here -->
+                <table>
+                    <tr>
+                        <td>Nama</td>
+                        <td>:</td>
+                        <td style="vertical-align: center;">Muhamad Dani Yusuf</td>
+                    </tr>
+                    <tr>
+                        <td>Tanggal Lahir</td>
+                        <td>:</td>
+                        <td>06 Oktober 2001</td>
+                    </tr>
+                    <tr>
+                        <td>Pekerjaan</td>
+                        <td>:</td>
+                        <td>Mahasiswa</td>
+                    </tr>
+                </table>
+                <p>Check me out on :</p>
+                <div class="social">
+                    <div class="social-link">
+                        <a href="https://twitter.com/DanYuki8" target="_blank"><img src="assets/img/twitter.svg" alt="" height="30px"><p>Twitter</p></a>
+                    </div>
+                    <div class="social-link">
+                        <a href="https://github.com/DanYuki" target="_blank"><img src="assets/img/github.svg" alt="" height="30px"><p>Github</p></a>
+                    </div>
+                </div>
+            </aside>
+ </main>
 
     <footer>
         <p><strong>&copy;Dan Yuki 2023</strong></p>

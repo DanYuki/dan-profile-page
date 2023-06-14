@@ -47,14 +47,27 @@ header nav li a:hover {
     font-weight: 700;
 }
 
-body .content {
-    display: flex;
+main {
+    display:flex;
     gap: 1em;
+    margin: 0.6em 0.6em 0.6em 0.6em;
+    padding: 30px;
 }
 
 .content {
-    margin: 0.6em 0.6em 0.6em 0.6em;
-    padding: 30px;
+    display: flex;
+    gap: 1em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: white;
+    /* margin: 0.6em 0.6em 0.6em 0.6em; */
+    /* padding: 30px; */
+    order: 1;
+    /* border: 1px solid; */
+
+    
     /* border: 1px solid; */
 }
 
@@ -99,18 +112,6 @@ aside .social {
 aside .social-link {
     display: flex;
     flex-direction: column;
-}
-
-main {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    background-color: white;
-    /* margin: 0.6em 0.6em 0.6em 0.6em; */
-    /* padding: 30px; */
-    order: 1;
-    /* border: 1px solid; */
 }
 
 .post {
@@ -190,12 +191,12 @@ footer {
 }
 
 @media screen and (max-width: 720px) {
-    body .content {
+    body main {
         display: block;
     }
     aside {
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 1em;
+        margin-top: 1em;
     }
 }
